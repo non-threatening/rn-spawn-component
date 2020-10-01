@@ -1,0 +1,26 @@
+{
+  "name": "rn-spawn-component",
+  "version": "1.0.0",
+  "description": "Add and remove react-native components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n/a.git"
+  },
+  "keywords": [
+    "react-native",
+    "add",
+    "remove",
+    "spawn",
+    "componets"
+  ],
+  "author": "autr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n/a/issues"
+  },
+  "homepage": "https://github.com/n/a#readme"
+}
