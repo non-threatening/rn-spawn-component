@@ -1,29 +1,29 @@
 <h1 align="center">Welcome to rn-spawn-component 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/n/a#readme" target="_blank">
+  <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/n/a/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/non-threatening/rn-spawn-component/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/n/a/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/non-threatening/rn-spawn-component/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/non-threatening/rn-spawn-component" />
   </a>
 </p>
 
 > Add and remove react-native components.
 
-### 🏠 [Homepage](https://github.com/n/a#readme)
+<!-- ### 🏠 [Homepage](https://github.com/non-threatening/rn-spawn-component#readme) -->
 
-### ✨ [Demo](link to playstore thing)
-A complete demo with code examples can be found in this repo:
+<!-- ### ✨ [Demo](link to playstore thing)
+A complete demo with code examples can be found in this repo: -->
 
-## Install
+<!-- ## Install
 
 ```sh
 yarn install
-```
+``` -->
 
 ## Usage
 
@@ -63,8 +63,8 @@ function removeAll = () => {
 
 ## 📝 License
 
-Copyright © 2020 [non-threatening.com](https://github.com/non-threatening).<br />
-This project is [MIT](https://github.com/n/a/blob/master/LICENSE) licensed.
+Copyright © 2020 [non-threatening.com](https://github.com/non-threatening)<br />
+This project is [MIT](https://github.com/non-threatening/rn-spawn-component/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
