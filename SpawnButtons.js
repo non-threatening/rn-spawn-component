@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, TouchableNativeFeedback, Text, View} from 'react-native';
+import {StyleSheet, TouchableWithoutFeedback, Text, View} from 'react-native';
 import {useSpawnArray} from './spawnContext';
 
 export const AddSpawn = (props) => {
@@ -63,7 +63,6 @@ export const RemoveAll = (props) => {
       type: 'KILL_SPAWN',
     });
   };
-  // removeAll();
   return (
     <>
       <Button
@@ -78,13 +77,13 @@ export const RemoveAll = (props) => {
 
 function Button({append, onPress, label, prepend}) {
   return (
-    <TouchableNativeFeedback onPress={onPress}>
+    <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.button}>
         <View>{prepend ? prepend : null}</View>
         <Text>{label}</Text>
         <View>{append ? append : null}</View>
       </View>
-    </TouchableNativeFeedback>
+    </TouchableWithoutFeedback>
   );
 }
 
