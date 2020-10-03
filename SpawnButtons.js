@@ -70,17 +70,19 @@ export const RemoveAll = (props) => {
         label={props.label ? props.label : 'Clear Spawned'}
         prepend={props.prepend ? props.prepend : null}
         append={props.append ? props.append : null}
+        textStyle={props.textStyle ? props.textStyle : null}
+        style={props.style ? props.style : null}
       />
     </>
   );
 };
 
-function Button({append, onPress, label, prepend}) {
+function Button({append, onPress, label, prepend, style, textStyle}) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View style={styles.button}>
+      <View style={[styles.button, style]}>
         <View>{prepend ? prepend : null}</View>
-        <Text>{label}</Text>
+        <Text style={[textStyle, {}]}>{label}</Text>
         <View>{append ? append : null}</View>
       </View>
     </TouchableWithoutFeedback>

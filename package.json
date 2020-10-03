@@ -8,19 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/n/a.git"
+    "url": "git+https://github.com/non-threatening/rn-spawn-component.git"
   },
   "keywords": [
+    "react",
     "react-native",
     "add",
     "remove",
     "spawn",
-    "componets"
+    "components"
   ],
-  "author": "autr",
+  "author": "non-threatening",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/n/a/issues"
+    "url": "https://github.com/non-threatening/rn-spawn-component/issues"
   },
-  "homepage": "https://github.com/n/a#readme"
+  "homepage": "https://github.com/non-threatening/rn-spawn-component#readme"
 }
