@@ -14,18 +14,19 @@
 
 > Add and remove react-native components.
 
-#### This package and documentation are currently under development!
-
 <!-- ### 🏠 [Homepage](https://github.com/non-threatening/rn-spawn-component#readme) -->
 
 <!-- ### ✨ [Demo](link to playstore thing)
 A complete demo with code examples can be found in this repo: -->
 
-<!-- ## Install
-
+## Install
 ```sh
-yarn install rn-spawn-component
-``` -->
+yarn add rn-spawn-component
+
+or
+
+npm i rn-spawn-component
+```
 
 ## Usage
 
@@ -35,6 +36,9 @@ yarn install rn-spawn-component
 import {SpawnProvider, SpawnController, AddSpawn} from 'rn-spawn-component';
 
 const App: () => React$Node = () => {
+  function MyComponent() {
+    return <Text>Hello</Text>;
+  }
   return (
     <SpawnProvider>
       <SpawnController spawn={<MyComponent />} name="myComponent" />
@@ -137,7 +141,7 @@ This button removes the spawned component it is inside of.
 // myComponent.js
 import React from 'react';
 import {Text, View} from 'react-native';
-import {RemoveSpawn} from './rn-spawn-component';
+import {RemoveSpawn} from 'rn-spawn-component';
 
 export const MyComponent = (props) => {
   const spawnNum = props.spawnNumber;

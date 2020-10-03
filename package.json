@@ -16,6 +16,8 @@
     "add",
     "remove",
     "spawn",
+    "duplicate",
+    "clone",
     "components"
   ],
   "author": "non-threatening",
