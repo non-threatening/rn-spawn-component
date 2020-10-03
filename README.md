@@ -49,9 +49,11 @@ const App: () => React$Node = () => {
 ### SpawnController
 
 **Place this Component where you would like your spawned Components to appear.**
+
 ```jsx
 import {SpawnController} from 'rn-spawn-component';
 ```
+
 ```jsx
 <SpawnController spawn={<MyComponent />} name="myComponent" />
 ```
@@ -60,7 +62,7 @@ import {SpawnController} from 'rn-spawn-component';
 | :--------: | :-------: | :------: | :-------------------------------------------- |
 |   spawn    | Component |   true   | A single React Component                      |
 |    name    |  string   |   true   | A unique name for each reproducible component |
-| startCount |  number   | optional | Number to spawn on load  |
+| startCount |  number   | optional | Number to spawn on load                       |
 
 ### Drop in button components
 
@@ -70,43 +72,69 @@ import {SpawnController} from 'rn-spawn-component';
 | label | string | optional | Button text |
 | prepend | Component | optional | Prepend a Component to the inside of the button |
 | append | Component | optional | Append a Component to the inside of the button |
-| style | styles | optional | Custom Styling for the Button View |
-| textStyle | styles | optional | Custom Styling for the Label Text |
+| style | style Object | optional | Custom Styling for the Button View |
+| textStyle | style Object | optional | Custom Styling for the Label Text |
 
 #### AddSpawn
+
 ```jsx
 import {AddSpawn} from 'rn-spawn-component';
 ```
+
 ```jsx
 <AddSpawn name="myComponent" label="Spawn Component" prepend={<myIcon />} />
 ```
 
 | Props |  Type  | Required | Description                                 |
 | :---: | :----: | :------: | :------------------------------------------ |
-| name  | String |   true   | Name of the SpawnController you wish to add |
+| name  | string |   true   | Name of the SpawnController you wish to add |
 
 #### ClearSpawns
+Clears all spawned components sharing a name.
 ```jsx
 import {ClearSpawns} from 'rn-spawn-component';
 ```
+
 ```jsx
-<ClearSpawns name="dummy" label="Clear Spawns" append={<myIcon />} />
+<ClearSpawns name="myComponent" label="Clear Spawns" append={<myIcon />} />
 ```
 
 | Props |  Type  | Required | Description                                              |
 | :---: | :----: | :------: | :------------------------------------------------------- |
 | name  | string |   true   | Name of the SpawnController components you wish to clear |
 
-#### RemoveSelf
-This button removes the spawned component it is inside of.
-
 #### RemoveAll
-Removes all spawned components of any name. label is the only prop.
+
+Removes all spawned components of any name.
+
 ```jsx
 import {RemoveAll} from 'rn-spawn-component';
 ```
+
 ```jsx
 <RemoveAll label="Remove All" />
+```
+
+#### RemoveSpawn
+
+```jsx
+import {RemoveSpawn} from 'rn-spawn-component';
+```
+
+```jsx
+<RemoveSpawn spawn={props.spawnNumber} label={'Kill Me'} />
+```
+
+This button removes the spawned component it is inside of.
+
+| Props |  Type  | Required | Description                                             |
+| :---: | :----: | :------: | :------------------------------------------------------ |
+| spawn | number |   true   | spawnNumber\* of the Component you would like to remove |
+
+\*The spawnNumber is generated on creation. See myComponent below to see how to access the SpawnNumber.
+
+```jsx
+// myComponent.js
 ```
 
 **Functions can be called independently following the rules of hooks.**
@@ -123,7 +151,7 @@ import {RemoveAll} from 'rn-spawn-component';
 import React from 'react';
 import {Text, View} from 'react-native';
 
-import {RemoveSpawn} from './rn-spawn-component';
+import {RemoveSpawn} from 'rn-spawn-component';
 
 export const DummyComponent = (props) => {
   return (
