@@ -24,7 +24,7 @@ A complete demo with code examples can be found in this repo: -->
 <!-- ## Install
 
 ```sh
-yarn install
+yarn install rn-spawn-component
 ``` -->
 
 ## Usage
@@ -37,7 +37,7 @@ import {SpawnProvider, SpawnController, AddSpawn} from 'rn-spawn-component';
 const App: () => React$Node = () => {
   return (
     <SpawnProvider>
-      <SpawnController spawn={<MyComponent />} name="MyComponent" />
+      <SpawnController spawn={<MyComponent />} name="myComponent" />
       <AddSpawn name="myComponent" label="Spawn Component" />
     </SpawnProvider>
   );
@@ -122,7 +122,7 @@ import {RemoveSpawn} from 'rn-spawn-component';
 ```
 
 ```jsx
-<RemoveSpawn spawn={props.spawnNumber} label={'Kill Me'} />
+<RemoveSpawn spawn={spawnNumber} label={'Kill Me'} />
 ```
 
 This button removes the spawned component it is inside of.
@@ -131,7 +131,7 @@ This button removes the spawned component it is inside of.
 | :---: | :----: | :------: | :------------------------------------------------------ |
 | spawn | number |   true   | spawnNumber\* of the Component you would like to remove |
 
-\*The spawnNumber is generated on creation. See myComponent below to see how to access the SpawnNumber.
+\*The spawnNumber is generated on creation. See myComponent.js below to see how to access the SpawnNumber.
 
 ```jsx
 // myComponent.js
