@@ -135,40 +135,29 @@ This button removes the spawned component it is inside of.
 
 ```jsx
 // myComponent.js
-```
-
-**Functions can be called independently following the rules of hooks.**
-
-## Full Example
-
-[github repo](github.com/non...)
-
-####Example spawnable component with remove button and the spawned index:
-
-> DummyComponent.js
-
-```jsx
 import React from 'react';
 import {Text, View} from 'react-native';
+import {RemoveSpawn} from './rn-spawn-component';
 
-import {RemoveSpawn} from 'rn-spawn-component';
-
-export const DummyComponent = (props) => {
+export const MyComponent = (props) => {
+  const spawnNum = props.spawnNumber;
   return (
     <View
-      style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        margin: 10,
-        height: 80,
-      }}>
+      style={{backgroundColor: 'rgba(255, 255, 255, 0.2)', margin: 10, height: 80}}>
       <View style={{alignItems: 'center'}}>
-        <Text>{props.spawnNumber}</Text>
-        <RemoveSpawn spawn={props.spawnNumber} label={'Kill Me'} />
+        <Text>{spawnNum}</Text>
+        <RemoveSpawn spawn={spawnNum} label={'Kill Me'} />
       </View>
     </View>
   );
 };
 ```
+
+**Functions can be called independently following the rules of hooks.**
+
+## Full Example
+[github repo](github.com/non...)
+
 
 ## Author
 
