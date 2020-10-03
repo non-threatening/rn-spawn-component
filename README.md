@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rn-spawn-component</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -30,7 +30,7 @@ npm i rn-spawn-component
 
 ## Usage
 
-**The SpawnProvider must wrap your App**
+The SpawnProvider must wrap your App
 
 ```jsx
 import {SpawnProvider, SpawnController, AddSpawn} from 'rn-spawn-component';
@@ -52,7 +52,7 @@ const App: () => React$Node = () => {
 
 ### SpawnController
 
-**Place this Component where you would like your spawned Components to appear.**
+Place SpawnController where you would like your spawned Components to appear.
 
 ```jsx
 import {SpawnController} from 'rn-spawn-component';
@@ -70,7 +70,7 @@ import {SpawnController} from 'rn-spawn-component';
 
 ### Drop in button components
 
-**All of the built in button components share the following props:**
+All of the built in button components share the following props:
 | Props | Type | Required | Description |
 | :----: | :----: | :----: | :----------------------------------------------------- |
 | label | string | optional | Button text |
