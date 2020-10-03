@@ -34,7 +34,7 @@ export const SpawnController = (props) => {
         const deleteKnob = [...controlSpawn.map((thing) => thing[0])];
         setKnobs(knobs.filter((thing) => deleteKnob.includes(thing.key)));
     }
-    console.log('SpawnController:', spawn);
+    // console.log('SpawnController:', spawn);
   }, [spawn]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const add = () => {
