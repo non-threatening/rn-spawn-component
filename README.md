@@ -37,8 +37,8 @@ import {SpawnProvider, SpawnController, AddSpawn} from 'rn-spawn-component';
 const App: () => React$Node = () => {
   return (
     <SpawnProvider>
-      <SpawnController spawn={<DummyComponent />} name="dummy" />
-      <AddSpawn name="dummy" label="Spawn Component" />
+      <SpawnController spawn={<MyComponent />} name="MyComponent" />
+      <AddSpawn name="myComponent" label="Spawn Component" />
     </SpawnProvider>
   );
 };
