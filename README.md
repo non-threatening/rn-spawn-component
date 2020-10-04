@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rn-spawn-component</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.6-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -81,8 +81,11 @@ All of the built in button components share the following props:
 | label | string | optional | Button text |
 | prepend | Component | optional | Prepend a Component to the inside of the button |
 | append | Component | optional | Append a Component to the inside of the button |
+| buttonColor | string | optional | Button color when not pressed |
+| pressedColor | string | optional | Button color when pressed |
 | style | style Object | optional | Custom Styling for the Button View |
 | textStyle | style Object | optional | Custom Styling for the Label Text |
+| android_ripple | [RippleConfig](https://reactnative.dev/docs/pressable#rippleconfig) | optional | Android only ripple effect |
 
 #### AddSpawn
 
@@ -160,7 +163,7 @@ export const MyComponent = (props) => {
         height: 80,
       }}>
       <View style={{alignItems: 'center'}}>
-        <Text>{spawnNum}</Text>
+        <Text>spawnNumber: {spawnNum}</Text>
         <RemoveSpawn spawn={spawnNum} label={'Kill Me'} />
       </View>
     </View>
