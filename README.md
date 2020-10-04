@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rn-spawn-component</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.4-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.5-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -20,6 +20,7 @@ Add and remove react-native components.
 
 A complete demo with code examples can be found in this repo:
 [https://github.com/non-threatening/rnSpawnComponentDemo](https://github.com/non-threatening/rnSpawnComponentDemo)
+![Demo.gif](https://github.com/non-threatening/rnSpawnComponentDemo/blob/master/Demo_001.GIF)
 
 ## Install
 
@@ -126,6 +127,8 @@ import {RemoveAll} from 'rn-spawn-component';
 
 #### RemoveSpawn
 
+Removes the spawned component it is inside of.
+
 ```jsx
 import {RemoveSpawn} from 'rn-spawn-component';
 ```
@@ -133,8 +136,6 @@ import {RemoveSpawn} from 'rn-spawn-component';
 ```jsx
 <RemoveSpawn spawn={spawnNumber} label={'Kill Me'} />
 ```
-
-This button removes the spawned component it is inside of.
 
 | Props |  Type  | Required | Description                                             |
 | :---: | :----: | :------: | :------------------------------------------------------ |
