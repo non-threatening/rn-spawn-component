@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rn-spawn-component</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.3-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.4-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -12,14 +12,17 @@
   </a>
 </p>
 
-> Add and remove react-native components.
+Add and remove react-native components.
 
 <!-- ### 🏠 [Homepage](https://github.com/non-threatening/rn-spawn-component#readme) -->
 
-<!-- ### ✨ [Demo](link to playstore thing)
-A complete demo with code examples can be found in this repo: -->
+### ✨ [Demo](https://github.com/non-threatening/rnSpawnComponentDemo)
+
+A complete demo with code examples can be found in this repo:
+[https://github.com/non-threatening/rnSpawnComponentDemo](https://github.com/non-threatening/rnSpawnComponentDemo)
 
 ## Install
+
 ```sh
 yarn add rn-spawn-component
 
@@ -94,7 +97,9 @@ import {AddSpawn} from 'rn-spawn-component';
 | name  | string |   true   | Name of the SpawnController you wish to add |
 
 #### ClearSpawns
+
 Clears all spawned components sharing a name.
+
 ```jsx
 import {ClearSpawns} from 'rn-spawn-component';
 ```
@@ -147,7 +152,11 @@ export const MyComponent = (props) => {
   const spawnNum = props.spawnNumber;
   return (
     <View
-      style={{backgroundColor: 'rgba(255, 255, 255, 0.2)', margin: 10, height: 80}}>
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        margin: 10,
+        height: 80,
+      }}>
       <View style={{alignItems: 'center'}}>
         <Text>{spawnNum}</Text>
         <RemoveSpawn spawn={spawnNum} label={'Kill Me'} />
@@ -160,8 +169,8 @@ export const MyComponent = (props) => {
 **Functions can be called independently following the rules of hooks.**
 
 ## Full Example
-[github repo](github.com/non...)
 
+[github repo](https://github.com/non-threatening/rnSpawnComponentDemo)
 
 ## Author
 
