@@ -18,8 +18,9 @@ Add and remove react-native components.
 
 ### ✨ [Demo](https://github.com/non-threatening/rnSpawnComponentDemo)
 
-A complete demo with code examples can be found in this repo:
 ![Demo.gif](https://github.com/non-threatening/rnSpawnComponentDemo/blob/master/Demo_001.GIF)
+
+A complete demo with code examples can be found in this repo:
 [https://github.com/non-threatening/rnSpawnComponentDemo](https://github.com/non-threatening/rnSpawnComponentDemo)
 
 ## Install
