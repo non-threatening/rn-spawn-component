@@ -64,7 +64,7 @@ import {SpawnController} from 'rn-spawn-component';
 ```
 
 ```jsx
-<SpawnController spawn={<MyComponent />} name="myComponent" />
+<SpawnController spawn={<MyComponent />} name="myComponent" startCount={2} />
 ```
 
 |   Props    |   Type    | Required | Description                                   |
@@ -168,11 +168,9 @@ export const MyComponent = (props) => {
 };
 ```
 
-**Functions can be called independently following the rules of hooks.**
+<!-- **Functions can be called independently following the rules of hooks.** -->
 
-## Full Example
 
-[github repo](https://github.com/non-threatening/rnSpawnComponentDemo)
 
 ## Author
 
