@@ -3,7 +3,7 @@ import {useSpawnArray} from './spawnContext';
 
 export const SpawnController = (props) => {
   const starting = props.startCount;
-  const [{spawn}, dispatch] = useSpawnArray();
+  const [{spawnArray}, dispatch] = useSpawnArray();
   const [knobs, setKnobs] = useState([]);
 
   let newKnobs = knobs.reverse().map((item, index) => {
@@ -15,7 +15,9 @@ export const SpawnController = (props) => {
   }
 
   useEffect(() => {
-    const controlSpawn = spawn.filter((thing) => thing.includes(props.name));
+    const controlSpawn = spawnArray.filter((thing) =>
+      thing.includes(props.name),
+    );
     switch (true) {
       case !controlSpawn.length:
         setKnobs([]);
@@ -35,7 +37,7 @@ export const SpawnController = (props) => {
         setKnobs(knobs.filter((thing) => deleteKnob.includes(thing.key)));
     }
     // console.log('SpawnController:', spawn);
-  }, [spawn]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [spawnArray]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const add = () => {
     dispatch({
