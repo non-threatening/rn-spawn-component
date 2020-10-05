@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rn-spawn-component</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.7-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.8-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/non-threatening/rn-spawn-component#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -12,7 +12,7 @@
   </a>
 </p>
 
-Add and remove react-native components.
+Clone and remove react-native components.
 
 <!-- ### 🏠 [Homepage](https://github.com/non-threatening/rn-spawn-component#readme) -->
 
@@ -42,7 +42,7 @@ import {SpawnProvider, SpawnController, AddSpawn} from 'rn-spawn-component';
 
 const App: () => React$Node = () => {
   function MyComponent() {
-    return <Text>Hello</Text>;
+    return <Text>Hello World</Text>;
   }
   return (
     <SpawnProvider>
@@ -72,7 +72,7 @@ import {SpawnController} from 'rn-spawn-component';
 |   spawn    | Component |   true   | A single React Component                      |
 |    name    |  string   |   true   | A unique name for each reproducible component |
 | startCount |  number   | optional | Number to spawn on load                       |
-
+---
 ### Drop in button components
 
 All of the built in button components share the following props:
@@ -170,10 +170,40 @@ export const MyComponent = (props) => {
   );
 };
 ```
+---
+####Functions can be called independently of the included buttons.
 
-<!-- **Functions can be called independently following the rules of hooks.** -->
+This must be within the scope of the SpawnProvider within a functional component.
 
+```jsx
+// import useSpawnArray
+import {useSpawnArray} from './spawnContext';
+```
+```jsx
+//and declare the dispatch function in your component
+const [{}, dispatch] = useSpawnArray();
+```
+```jsx
+// name: The corresponding name of the SpawnController to add.
+const add = (name) => {
+  dispatch({type: 'NEW_SPAWN', name: name});
+};
 
+// spawnNumber: See myComponent.js example above
+const remove = (spawnNumber) => {
+  dispatch({type: 'REMOVE_SINGLE_SPAWN', payload: spawnNumber});
+};
+
+// name: The corresponding name of the SpawnControllers to remove.
+const removeKind = (name) => {
+  dispatch({type: 'REMOVE_NAME', name: name});
+};
+
+// Kill all Spawned components
+const removeAll = () => {
+  dispatch({type: 'KILL_ALL_SPAWN'});
+};
+```
 
 ## Author
 
