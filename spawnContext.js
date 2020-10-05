@@ -18,7 +18,7 @@ export const reducer = (state, action) => {
 
   const removeSpawn = (removed) => {
     const newArr = [...state.spawnArray];
-    const del = [...state.spawnArray.map((thing) => thing[0])];
+    const del = [...newArr.map((thing) => thing[0])];
     removed = del.indexOf(removed);
     newArr.splice(removed, 1);
     return newArr.length ? newArr : [];
@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
   };
 
   switch (action.type) {
-    case 'KILL_SPAWN':
+    case 'KILL_ALL_SPAWN':
       return {
         spawnArray: [],
       };
@@ -38,7 +38,7 @@ export const reducer = (state, action) => {
       return {
         spawnArray: newSpawn(action.name),
       };
-    case 'REMOVE_SPAWN':
+    case 'REMOVE_SINGLE_SPAWN':
       return {
         spawnArray: removeSpawn(action.payload),
       };

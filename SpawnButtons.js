@@ -30,7 +30,7 @@ export const RemoveSpawn = (props) => {
   const [{}, dispatch] = useSpawnArray();
   const remove = () => {
     dispatch({
-      type: 'REMOVE_SPAWN',
+      type: 'REMOVE_SINGLE_SPAWN',
       payload: props.spawn,
     });
   };
@@ -76,7 +76,7 @@ export const RemoveAll = (props) => {
   const [{}, dispatch] = useSpawnArray();
   const removeAll = () => {
     dispatch({
-      type: 'KILL_SPAWN',
+      type: 'KILL_ALL_SPAWN',
     });
   };
   return (
