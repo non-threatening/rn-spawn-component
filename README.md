@@ -171,7 +171,8 @@ export const MyComponent = (props) => {
 };
 ```
 ---
-####Functions can be called independently of the included buttons.
+
+#### Functions can be called independently of the included buttons.
 
 This must be within the scope of the SpawnProvider within a functional component.
 
