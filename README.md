@@ -172,16 +172,16 @@ export const MyComponent = (props) => {
 ```
 ---
 
-#### Functions can be called independently of the included buttons.
+### Functions can be called independently of the included buttons.
 
-This must be within the scope of the SpawnProvider within a functional component.
+This must be within the scope of the SpawnProvider in a functional component.
 
 ```jsx
 // import useSpawnArray
 import {useSpawnArray} from './spawnContext';
 ```
 ```jsx
-//and declare the dispatch function in your component
+// declare the dispatch function in your component
 const [{}, dispatch] = useSpawnArray();
 ```
 ```jsx
