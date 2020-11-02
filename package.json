@@ -1,6 +1,6 @@
 {
   "name": "rn-spawn-component",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Add and remove react-native components.",
   "main": "index.js",
   "scripts": {

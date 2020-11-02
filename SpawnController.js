@@ -6,8 +6,6 @@ export const SpawnController = (props) => {
   const [{spawnArray}, dispatch] = useSpawnArray();
   const [knobs, setKnobs] = useState([]);
 
-  // try to reverse this in a better way. Maybe do two steps, first reverse then map
-  // OR better, reverse the array in setKnobs()
   let reverseArray = knobs.reverse();
   let newKnobs = reverseArray.map((item, index) => {
     return AddExtraProps(props.spawn, {spawnNumber: item.key, key: item.key});
@@ -39,7 +37,6 @@ export const SpawnController = (props) => {
         const deleteKnob = [...controlSpawn.map((thing) => thing[0])];
         setKnobs(knobs.filter((thing) => deleteKnob.includes(thing.key)));
     }
-    // console.log('SpawnController:', spawn);
   }, [spawnArray]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const add = (name) => {
