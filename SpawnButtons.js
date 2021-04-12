@@ -3,7 +3,7 @@ import React from 'react';
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 import {useSpawnArray} from './spawnContext';
 
-export const AddSpawn = (props) => {
+export const AddSpawn = props => {
   const [{}, dispatch] = useSpawnArray();
   const add = () => {
     dispatch({
@@ -26,7 +26,7 @@ export const AddSpawn = (props) => {
   );
 };
 
-export const RemoveSpawn = (props) => {
+export const RemoveSpawn = props => {
   const [{}, dispatch] = useSpawnArray();
   const remove = () => {
     dispatch({
@@ -49,7 +49,7 @@ export const RemoveSpawn = (props) => {
   );
 };
 
-export const ClearSpawns = (props) => {
+export const ClearSpawns = props => {
   const [{}, dispatch] = useSpawnArray();
   const removeKind = () => {
     dispatch({
@@ -72,7 +72,7 @@ export const ClearSpawns = (props) => {
   );
 };
 
-export const RemoveAll = (props) => {
+export const RemoveAll = props => {
   const [{}, dispatch] = useSpawnArray();
   const removeAll = () => {
     dispatch({

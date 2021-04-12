@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useSpawnArray} from './spawnContext';
 
-export const SpawnController = (props) => {
+export const SpawnController = props => {
   const starting = props.startCount;
   const [{spawnArray}, dispatch] = useSpawnArray();
   const [knobs, setKnobs] = useState([]);
@@ -16,30 +16,26 @@ export const SpawnController = (props) => {
   }
 
   useEffect(() => {
-    const controlSpawn = spawnArray.filter((thing) =>
-      thing.includes(props.name),
-    );
+    const controlSpawn = spawnArray.filter(thing => thing.includes(props.name));
     switch (true) {
       case !controlSpawn.length:
         setKnobs([]);
         break;
       case controlSpawn.length > knobs.length:
         let addKnob = {
-          key: Number.isFinite(
-            Math.max(...controlSpawn.map((thing) => thing[0])),
-          )
-            ? Math.max(...controlSpawn.map((thing) => thing[0]))
+          key: Number.isFinite(Math.max(...controlSpawn.map(thing => thing[0])))
+            ? Math.max(...controlSpawn.map(thing => thing[0]))
             : 0,
         };
         setKnobs([...knobs, addKnob]);
         break;
       default:
-        const deleteKnob = [...controlSpawn.map((thing) => thing[0])];
-        setKnobs(knobs.filter((thing) => deleteKnob.includes(thing.key)));
+        const deleteKnob = [...controlSpawn.map(thing => thing[0])];
+        setKnobs(knobs.filter(thing => deleteKnob.includes(thing.key)));
     }
   }, [spawnArray]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const add = (name) => {
+  const add = name => {
     dispatch({type: 'NEW_SPAWN', name: name});
   };
 

@@ -5,27 +5,27 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
-  const newSpawn = (name) => {
+  const newSpawn = name => {
     let incSpawn = Number.isFinite(
-      Math.max(...state.spawnArray.map((thing) => thing[0])),
+      Math.max(...state.spawnArray.map(thing => thing[0])),
     )
-      ? Math.max(...state.spawnArray.map((thing) => thing[0])) + 1
+      ? Math.max(...state.spawnArray.map(thing => thing[0])) + 1
       : 0;
     state.spawnArray.push([incSpawn, name]);
     const arraySpawn = [...state.spawnArray];
     return state.spawnArray.length ? arraySpawn : [0, name];
   };
 
-  const removeSpawn = (removed) => {
+  const removeSpawn = removed => {
     const newArr = [...state.spawnArray];
-    const del = [...newArr.map((thing) => thing[0])];
+    const del = [...newArr.map(thing => thing[0])];
     removed = del.indexOf(removed);
     newArr.splice(removed, 1);
     return newArr.length ? newArr : [];
   };
 
-  const removeKind = (name) => {
-    const swSpawn = state.spawnArray.filter((thing) => !thing.includes(name));
+  const removeKind = name => {
+    const swSpawn = state.spawnArray.filter(thing => !thing.includes(name));
     return swSpawn;
   };
 
