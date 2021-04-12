@@ -8,7 +8,11 @@ export const SpawnController = props => {
 
   let reverseArray = knobs.reverse();
   let newKnobs = reverseArray.map((item, index) => {
-    return AddExtraProps(props.spawn, {spawnNumber: item.key, key: item.key});
+    return AddExtraProps(props.spawn, {
+      spawnNumber: item.key,
+      key: item.key,
+      name: props.name,
+    });
   });
 
   function AddExtraProps(Component, extraProps) {
